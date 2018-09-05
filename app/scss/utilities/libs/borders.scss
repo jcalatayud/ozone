@@ -1,0 +1,41 @@
+// Border utilities
+
+/* Add a gray border */
+.border        { border: $border; }
+/* Add a gray border to the top */
+.border-top    { border-top: $border; }
+/* Add a gray border to the right */
+.border-right  { border-right: $border; }
+/* Add a gray border to the bottom */
+.border-bottom { border-bottom: $border; }
+/* Add a gray border to the left */
+.border-left   { border-left: $border; }
+/* Add a gray border to the left and right */
+.border-y {
+  border-top: $border;
+  border-bottom: $border;
+}
+
+.border-dashed { border-style: dashed; }
+
+// Without borders
+/* Remove all borders */
+.border-0        { border: 0; }
+/* Remove the top border */
+.border-top-0    { border-top: 0; }
+/* Remove the right border */
+.border-right-0  { border-right: 0; }
+/* Remove the bottom border */
+.border-bottom-0 { border-bottom: 0; }
+/* Remove the left border */
+.border-left-0   { border-left: 0; }
+
+// Rounded corners
+/* Remove the border-radius */
+.rounded-0 { border-radius: 0; }
+/* Add a border-radius to all corners */
+.rounded-1 { border-radius: $border-radius; }
+/* Add a 2x border-radius to all corners */
+.rounded-2 { border-radius: $border-radius * 2; }
+/* Add a 50% border-radius to make something into a circle */
+.circle { border-radius: 50%; }
