@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  align-items: center;
+
+  img{
+    width: 15%;
+  }
+}
+
+.navigation{
+  ul{
+    padding-top: $spacer-2;
+    li{
+      padding-bottom: $spacer-2;
+    }
+  }
+}

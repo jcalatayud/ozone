@@ -1,0 +1,9 @@
+// Miscellaneous variables
+// stylelint-disable declaration-bang-space-before
+
+// Border size
+$border-width:  0.1rem !default;
+$border-color: grey;//$border-gray !default;
+$border-style: solid !default;
+$border: $border-width $border-color $border-style !default;
+$border-radius: 0.3rem !default;

@@ -1,0 +1,40 @@
+//Set up the grid
+.wrapper{
+  padding: 1.2rem;
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "header"
+  "sidebar"
+  "content"
+  "footer";
+
+  @include breakpoint(md){
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header  header  header"
+    "sidebar content content"
+    "footer  footer  footer";
+  }
+  //Defining grid areas
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .content {
+    grid-area: content;
+  }
+  .header {
+    grid-area: header;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+
+.wrapper-item{
+  background-color: #f8f8f8;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.3rem;
+  padding: 1.2rem;
+}

@@ -1,0 +1,193 @@
+//typography
+// Type scale variables found in support/lib/variables/_typographyt.scss
+// $h00-size-mobile: 4rem;
+// $h0-size-mobile: 3.2rem;
+// $h1-size-mobile: 2.6rem;
+// $h2-size-mobile: 2.2rem;
+// $h3-size-mobile: 1.8rem;
+// $h00-size: 4.8rem;
+// $h0-size: 4rem;
+// $h1-size: 3.2rem;
+// $h2-size: 2.4rem;
+// $h3-size: 2rem;
+// $h4-size: 1.6rem;
+// $h5-size: 1.4rem;
+// $h6-size: 1.2rem;
+
+// Does not include color property like typography base
+// styles, color should be applied with color utilities.
+
+//Set the font size to 4rem/4.8rem
+.f00{
+  font-size: $h00-size-mobile;
+  @include breakpoint(md){ font-size: $h00-size;}
+}
+
+//Set the font size to 3.2rem/4rem
+.f0{
+  font-size: $h0-size-mobile;
+  @include breakpoint(md){ font-size: $h0-size;}
+}
+
+//Set the font size to 2.6rem/3.2rem
+.f1 {
+  font-size: $h1-size-mobile;
+  @include breakpoint(md) { font-size: $h1-size; }
+
+}
+
+//Set the font size to 2.2rem/2.4rem
+.f2 {
+  font-size: $h2-size-mobile;
+  @include breakpoint(md) { font-size: $h2-size; }
+}
+
+//Set the font size to 1.8rem/2rem
+.f3 {
+  font-size: $h3-size-mobile;
+  @include breakpoint(md) { font-size: $h3-size; }
+
+}
+
+//Set the font size to 1.6rem
+.f4 { font-size: $h4-size; }
+
+//Set the font size to 1.4rem
+.f5 { font-size: $h5-size; }
+
+// Set the font size to 1.2rem
+.f6 { font-size: $h6-size; }
+
+// Heading utilities
+#{headings(1,6)} {
+   font-weight: $font-weight-bold;
+}
+
+//TODo see if we gonna use this
+// Type utils with light weight that match type scale ??
+/* Set the font size to 40px and weight to light */
+.f00-light {
+  font-size: $h00-size-mobile;
+  font-weight: $font-weight-light;
+
+  @include breakpoint(md) { font-size: $h00-size; }
+
+}
+
+/* Set the font size to 32px and weight to light */
+.f0-light {
+  font-size: $h0-size-mobile;
+  font-weight: $font-weight-light;
+
+  @include breakpoint(md) { font-size: $h0-size; }
+
+}
+
+/* Set the font size to 26px and weight to light */
+.f1-light {
+  font-size: $h1-size-mobile;
+  font-weight: $font-weight-light;
+
+  @include breakpoint(md) { font-size: $h1-size; }
+
+}
+
+/* Set the font size to 22px and weight to light */
+.f2-light {
+  font-size: $h2-size-mobile;
+  font-weight: $font-weight-light;
+
+  @include breakpoint(md) { font-size: $h2-size; }
+
+}
+// Same size and weight as .lead but without color property
+/* Set the font size to 18px and weight to light */
+.f3-light {
+  font-size: $h3-size-mobile;
+  font-weight: $font-weight-light;
+
+  @include breakpoint(md) { font-size: $h3-size; }
+
+}
+
+// Smallest text size
+/* Set the font size to 1.2rem */
+.text-small { font-size: $h6-size; } // 12px
+
+/* Large leading paragraphs */
+.lead {
+  margin-bottom: $spacer-5;
+  font-size: $h3-size;
+  font-weight: $font-weight-light;
+  //color: $gray-600;
+}
+
+// Line-height variations
+// Close to commonly used line-heights. Most line-heights
+// combined with type size equate to whole pixels.
+// Will be improved with future typography scale updates.
+/* Set the line height to ultra condensed */
+.lh-condensed-ultra { line-height: $lh-condensed-ultra; }
+/* Set the line height to condensed */
+.lh-condensed { line-height: $lh-condensed; }
+/* Set the line height to default */
+.lh-default { line-height: $lh-default; }
+
+// Text alignments
+/* Text align to the right */
+.text-right { text-align: right; }
+/* Text align to the left */
+.text-left { text-align: left; }
+/* Text align to the center */
+.text-center { text-align: center; }
+
+// Responsive text alignment
+// .text-md-left, .text-lg-right, ...
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint($breakpoint) {
+    .text-#{$breakpoint}-right { text-align: right; }
+    .text-#{$breakpoint}-left { text-align: left; }
+    .text-#{$breakpoint}-center { text-align: center; }
+  }
+}
+
+// Text styles
+/* Set the font weight to normal */
+.text-normal { font-weight: $font-weight-normal; }
+/* Set the font weight to bold */
+.text-bold { font-weight: $font-weight-bold;}
+/* Set the font to italic */
+.text-italic { font-style: italic; }
+/* Make text uppercase */
+.text-uppercase { text-transform: uppercase; }
+/* Underline text */
+.no-underline { text-decoration: none; }
+/* Don't wrap white space */
+.no-wrap { white-space: nowrap; }
+/* Normal white space */
+.ws-normal { white-space: normal; }
+/* Allow long lines with no spaces to line break */
+.wb-break-all { word-break: break-all; }
+
+.text-emphasized {
+  font-weight: $font-weight-bold;
+  //color: $text-gray-dark;
+}
+
+// List styles
+.list-style-none { list-style: none; }
+
+// Text Shadows
+/* Add a dark text shadow */
+.text-shadow-dark {
+  //text-shadow: 0 1px 1px rgba($black, 0.25), 0 1px 25px rgba($black, 0.75);
+}
+/* Add a light text shadow */
+.text-shadow-light {
+  //text-shadow: 0 1px 0 rgba($white, 0.5);
+}
+
+/* Set to monospace font */
+.text-mono {
+  font-family: $mono-font;
+}

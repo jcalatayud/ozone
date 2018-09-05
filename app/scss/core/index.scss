@@ -1,0 +1,16 @@
+// SGS master file
+//
+// Imports all files in their intended order for easy mass-inclusion.
+// Should you need specific files, you can easily use separate `@import`s.
+
+// Global requirements
+@import "app/scss/support/index.scss";
+
+// Core modules
+@import "app/scss/base/index.scss";
+
+// Utilities always go last so that they can override components
+@import "app/scss/utilities/index.scss";
+
+//library framework layout
+@import "app/scss/lib-schema/index.scss";

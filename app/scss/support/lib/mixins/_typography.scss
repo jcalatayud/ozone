@@ -1,0 +1,14 @@
+//function loop for headings h1, h2, h3, h4, h5, h6
+//provides an easy way to apply styles to all of the 6 standardised HTML headings (h1,h2,h3,h4,h5,h6).
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+
+/* example on how to call the function
+#{headings(1,6)} {
+  color: white;
+} */
